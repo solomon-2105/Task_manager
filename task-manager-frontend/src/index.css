@@ -1,12 +1,101 @@
 /* index.css */
-* {
+body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+.app-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.app-card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.app-title {
+  text-align: center;
+  margin-bottom: 20px;
   color: #333;
+}
+
+/* AddTaskForm */
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Task List */
+.task-list .task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: all 0.2s ease;
+}
+
+.task input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.task span {
+  flex: 1;
+  font-size: 16px;
+}
+
+.task.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.task .delete-button {
+  background: none;
+  border: none;
+  color: #d11a2a;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.task .delete-button:hover {
+  color: #a10e1b;
 }
